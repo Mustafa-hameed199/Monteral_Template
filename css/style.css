@@ -654,7 +654,7 @@ footer .black .social-icons i {
  }
  footer .container a { 
      position: absolute;
-     right: 0;
+     right: 50px;
      top: -40px;
      padding: 10px;
      background-color: var(--main-clr)
