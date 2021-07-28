@@ -31,7 +31,6 @@ body{
     padding-right: 50px;
     margin-left: auto ;
     margin-right: auto;
-    
 }
 
 /* Small  */
@@ -59,7 +58,7 @@ body{
     max-width:650px;
 }
 .main-heading h1 {
-    margin-top: 0;
+    margin: 0;
     margin-bottom: 20px;
     color: var(--main-clr);
     text-transform: uppercase;
@@ -70,7 +69,12 @@ body{
 /* ON header --------------------------------------------------*/
 
 header {
-    background-color: var(--main-black);
+    background: var(--main-black);
+}
+@media (max-width: 767px) {
+    header {
+        width: 100vh;
+    }
 }
 header .container {
     display:flex;
@@ -138,10 +142,14 @@ nav:hover ul{
 /* ON Landing ------------------------------------------------- */
 .landing{
     min-height: 100vh;
-    /* min-width: 100vw; */
     background: var(--main-black);
     position: relative;
     color: white;
+}
+@media (max-width: 767px) {
+    .landing {
+        width: 100vh;
+    }
 }
 .landing .container{
     min-height: 100vh;
@@ -161,6 +169,12 @@ nav:hover ul{
     font-size: 8rem;
     font-weight: normal;
     letter-spacing: 10px; 
+}
+
+@media (max-width: 767px) {
+    .landing .container h1 {
+        font-size: 6rem;
+    }
 }
 .landing .container p{
     line-height: 1.6;
@@ -189,6 +203,14 @@ nav:hover ul{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media (max-width: 767px) {
+    .apps {
+        width: 100vh;
+    }
+    .apps .app {
+        width: 100vh;
+    }
 }
 .apps .app q{
     width:55%
@@ -264,6 +286,11 @@ nav:hover ul{
 .stats{
     padding-top:var(--main-padding)
 }
+@media (max-width: 767px) {
+    .stats{
+        width: 100vh;
+    }
+}
 .stats .background{
     background-color: var(--main-black);
     padding: 50px;
@@ -318,6 +345,11 @@ nav:hover ul{
 /* ON Portfolio ----------------------------------------------- */
 .portfolio{
     padding-top: var(--main-padding)
+}
+@media (max-width: 767px) {
+    .portfolio{
+        width: 100vh;
+    }
 }
 .portfolio .container {
     display: flex;
@@ -460,6 +492,11 @@ nav:hover ul{
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
 }
+@media (max-width: 767px) {
+    .clients {
+        width: 100vh;
+    }
+}
 .clients .bgd{
     background-color: var(--main-black);
     padding: 100px 0 50px;
@@ -515,6 +552,11 @@ nav:hover ul{
     margin-right: auto;
     width: 60%;
 }
+@media (max-width: 767px) {
+    .contact{
+        width: 100vh;
+    }
+}
 .contact .container .form form { 
     display: flex;
     flex-wrap: wrap;
@@ -565,6 +607,11 @@ footer {
     padding-top: var(--main-padding);
     display: flex;
     flex-direction: column;
+}
+@media (max-width: 767px) {
+    footer{
+        width: 100vh;
+    }
 }
 footer .yellow{
     flex-basis: 100%;
@@ -654,12 +701,11 @@ footer .black .social-icons i {
  }
  footer .container a { 
      position: absolute;
-     right: 50px;
+     right: 0;
      top: -40px;
      padding: 10px;
      background-color: var(--main-clr)
  }
- 
  footer .container a i {
      color : black;
  }
