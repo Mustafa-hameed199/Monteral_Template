@@ -274,6 +274,8 @@ nav:hover ul{
     letter-spacing:1.5px;
     transition: .3s;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 .apps .container .box-up .box-in h5:hover{
     background-color: var(--main-clr);
@@ -281,6 +283,20 @@ nav:hover ul{
     box-shadow: 0 10px 11px -6px black;
     transform: scale(1.1)
 }
+.apps .container .box-up .box-in h5::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    background: linear-gradient(to right , transparent , #fff , transparent );
+    transition: .5s;
+}
+.apps .container .box-up .box-in h5:hover::after {
+    left: 100%;
+}
+
 
 /* ON Stats -------------------------------------------------------------- */
 .stats{
@@ -361,8 +377,6 @@ nav:hover ul{
 .portfolio  .photos{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center;
-    align-items: center; */
 }
 .portfolio .photos > *{
     flex-basis: 100%;
@@ -384,6 +398,7 @@ nav:hover ul{
     justify-content: center;
     align-items: center;
 }
+
 .portfolio .photos ul li:nth-child(1) h4 {
     padding: 5px 32.5px;
     background-color: var(--main-clr);
@@ -402,7 +417,25 @@ nav:hover ul{
     text-transform: capitalize;
     padding: 5px 25px;
     font-weight: normal;
-    transition: .3s;
+    overflow: hidden;
+    transition: .5s;
+    position: relative;
+    z-index: 1;
+}
+.portfolio .photos ul li h4::before {
+    content: "";
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -90%;
+    background: linear-gradient( to right , transparent , #fff, transparent);
+    transition: .7s;
+    transform: rotate(-45deg)
+}
+.portfolio .photos ul li h4:hover::before {
+    left: 100%;
 }
 @media (max-width: 767px) {
     .portfolio .photos ul li:nth-child(1),
@@ -533,7 +566,6 @@ nav:hover ul{
     align-items: center;
     margin: 0 auto 30px;
     flex-basis: 50px;
-    /* transform: translateX(50px) */
 }
 .clients .container .spani span {
     display: block;
@@ -620,7 +652,6 @@ footer .yellow{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* gap: 30px; */
     padding: 75px
 }
 footer .yellow .box {
@@ -638,7 +669,6 @@ footer .yellow .box:first-child {
 
 @media (max-width: 900px) {
     footer .yellow .box {
-        /* flex-basis: 100%; */
         flex-direction: column;
         justify-content: space-between; 
     }
